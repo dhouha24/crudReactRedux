@@ -30,14 +30,6 @@ const EditContact = () => {
     if (!email || !name || !number) {
       return toast.warning("Please fill in all fields!");
     }
-    const checkEmail = contacts.find(
-      (contact) => contact.id !== parseInt(id) && contact.email === email
-    );
-
-    const checkNumber = contacts.find(
-      (contact) =>
-        contact.id !== parseInt(id) && contact.number === parseInt(number)
-    );
 
     const data = {
       id: parseInt(id),
